@@ -11,8 +11,9 @@
   }
   
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Oswald:wght@300&display=swap');
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+
 .fa-2x {
 font-size: 2em;
 }
@@ -20,10 +21,11 @@ font-size: 2em;
 position: relative;
 display: table-cell;
 width: 60px;
-height: 36px;
+height: 100px;
 text-align: center;
 vertical-align: middle;
 font-size:20px;
+top:30px
 }
 
 
@@ -126,12 +128,22 @@ height: 100%;
   font-weight: 300;
   src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/ibmplexsans/v19/zYX9KVElMYYaJe8bpLHnCwDKjWr7AIFsdA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
   
   /* Main content */
   .main {
     margin-top: 30px; /* Add a top margin to avoid content overlay */
   }
 
+  
+  
   html {
     font-family: sans-serif;
     -ms-scroll-snap-type: mandatory;
@@ -188,13 +200,13 @@ height: 100%;
     padding: 1rem;
     height: 100vh;
     scroll-snap-align: start;
-    text-align: center;
+    
     position: relative;
     background-color:white;
 
   }
   #section2{
-    border-bottom: 1px solid white;
+
     padding: 1rem;
     height: 100vh;
     scroll-snap-align: start;
@@ -209,16 +221,37 @@ height: 100%;
     scroll-snap-align: start;
     text-align: center;
     position: relative;
-    background-color: aqua;
+    background-color: black;
   }
   #section4{
-    border-bottom: 1px solid white;
+    
     padding: 1rem;
-    height: 35vh;
+    height: 25vh;
     scroll-snap-align: start;
     text-align: center;
     position: relative;
-    background-color: aqua;
+    background-color: black;
+  }
+
+  #about{
+    background-color: white;
+    position: absolute;
+    top: 12.5%;
+    left: 15%;
+    width: 75%;
+    height: 75%;
+  }
+
+  #header{
+    border-bottom: 1px solid black;
+    height: 10%;
+    font-size: 7vh;
+  }
+  #bodyText{
+    border-right: 1px solid black;
+    height: 90%;
+    width: 75%;
+    
   }
  
   #homepagehome{
@@ -229,18 +262,16 @@ height: 100%;
     color:white;
     width: 100%;
     left: 0;
-    font-size: calc(7.5vw);
-    font-family: 'Oswald', sans-serif;
+    font-size: calc(6.5vw + 2vh);
+    font-family: 'IBM Plex Sans';
   }
+
+
   
-  h1 {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    color: white;
-    width: 100%;
-    left: 0;
-    font-size: calc(1rem + 3vw);
-    
+  
+  a{
+    text-decoration:  none;
+  }
+  a:visited{
+    color: grey;
   }
