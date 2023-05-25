@@ -216,7 +216,7 @@ height: 100%;
   }
   #section3{
     border-bottom: 1px solid white;
-    padding: 1rem;
+    padding: .3rem;
     height: 100vh;
     scroll-snap-align: start;
     text-align: center;
@@ -274,4 +274,95 @@ height: 100%;
   }
   a:visited{
     color: grey;
+  }
+  .container {
+    width: 85%;
+    height: 85vh;
+    margin: 10vh auto;
+    top: 0%;
+    background-color: black;
+    overflow: visible;
+    box-sizing: border-box;
+   
+    position: relative;
+    z-index: 2; /* Increase z-index to layer the container over the section */
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .sub-panels {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+  
+    height: 90%;
+    z-index: 3; /* Increase z-index to layer the sub-panels over the section */
+  }
+  
+  .sub-panel {
+    flex-basis: calc(33.33% - 20px);
+    overflow: hidden;
+    z-index: 4;
+    transition: transform 0.3s ease;
+    position: relative;
+    border: 1px solid  black;
+    box-sizing: border-box;
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+    opacity: 1;
+    height: 100%;
+  }
+  
+  .sub-panel:hover {
+    transform: scale(1.2);
+    z-index: 5;
+    position: relative;
+    overflow: visible;
+  }
+  
+  .sub-panels:hover .sub-panel:not(:hover) {
+    opacity: 0.2;
+  }
+  
+  .sub-panel:hover .sub-panel:not(:hover) {
+    opacity: 1;
+  }
+  
+  .image-container {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    background-color: white;
+  }
+  
+  .image-container img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%; /* Add max-width property */
+    max-height: 100%;
+  }
+  
+  .text-container {
+    height: 20%;
+    padding: 10px;
+    background-color: white;
+  
+    position: relative;
+    z-index: 5;
+  }
+  
+  .text-container p {
+    margin: 0;
+    text-align: center;
   }
